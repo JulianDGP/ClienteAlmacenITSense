@@ -1,0 +1,32 @@
+<div class="container">
+  <h2 class="my-3">Visualizar Inventario</h2>
+  <div class="mb-3">
+      <label class="form-label">Filtrar por Estado:</label>
+      <select class="form-select" [(ngModel)]="filtroEstado">
+          <option value="">Todos</option>
+          <option value="DISPONIBLE">Disponible</option>
+          <option value="DISPONIBLE_DEFECTUOSO">Disponible Defectuoso</option>
+      </select>
+  </div>
+  <button class="btn btn-primary mb-3" (click)="filtrarInventario()">Filtrar</button>
+  <table class="table">
+      <thead>
+          <tr>
+              <th>ID</th>
+              <th>Nombre</th>
+              <th>Tipo</th>
+              <th>Estado</th>
+              <th>Fecha de Ingreso</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let producto of productos">
+              <td>{{ producto.id }}</td>
+              <td>{{ producto.nombre }}</td>
+              <td>{{ producto.tipo }}</td>
+              <td>{{ producto.estado }}</td>
+              <td>{{ producto.fechaIngreso }}</td>
+          </tr>
+      </tbody>
+  </table>
+</div>

@@ -1,0 +1,26 @@
+<div class="container">
+    <h2>Visualizar Salidas</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Tipo</th>
+          <th>Estado</th>
+          <th>Fecha de Ingreso</th>
+          <th>Fecha de Salida</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let producto of productosNoDisponibles | orderBy: 'fechaRetiro': true">
+        <td>{{ producto.id }}</td>
+          <td>{{ producto.nombre }}</td>
+          <td>{{ producto.tipo }}</td>
+          <td>{{ producto.estado }}</td>
+          <td>{{ producto.fechaIngreso | date:'dd/MM/yyyy HH:mm:ss' }}</td>
+          <td>{{ producto.fechaRetiro | date:'dd/MM/yyyy HH:mm:ss' }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

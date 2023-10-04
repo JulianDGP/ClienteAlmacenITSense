@@ -1,0 +1,11 @@
+<div class="container">
+    <h2>Marcar Producto como Defectuoso</h2>
+    <form (submit)="marcarComoDefectuoso()">
+      <div class="form-group">
+        <label for="idProducto">ID del Producto defectuoso:</label>
+        <input type="number" id="idProducto" [(ngModel)]="idProducto" name="idProducto" class="form-control" required>
+      </div>
+      <button type="submit" class="btn btn-danger">Marcar como Defectuoso</button>
+    </form>
+  </div>
+  

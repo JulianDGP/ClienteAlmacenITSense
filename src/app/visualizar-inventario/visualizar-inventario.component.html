@@ -1,5 +1,5 @@
 <div class="container">
-  <h2 class="my-3">Visualizar Inventario</h2>
+  <h2 class="my-3">Lista de productos en stock</h2>
   <div class="mb-3">
       <label class="form-label">Filtrar por Estado:</label>
       <select class="form-select" [(ngModel)]="filtroEstado">
@@ -25,7 +25,7 @@
               <td>{{ producto.nombre }}</td>
               <td>{{ producto.tipo }}</td>
               <td>{{ producto.estado }}</td>
-              <td>{{ producto.fechaIngreso }}</td>
+              <td>{{ producto.fechaIngreso | date:'dd/MM/yyyy HH:mm:ss'}} </td>
           </tr>
       </tbody>
   </table>

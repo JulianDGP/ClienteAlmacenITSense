@@ -10,8 +10,6 @@
         <select id="estado" [(ngModel)]="nuevoProducto.estado" name="estado" class="form-control" required>
           <option value="DISPONIBLE">Disponible</option>
           <option value="DISPONIBLE_DEFECTUOSO">Disponible Defectuoso</option>
-          <option value="NO_DISPONIBLE">No Disponible</option>
-          <!-- Agrega otras opciones según tu enum EstadoProducto -->
         </select>
       </div>
       <div class="form-group">
@@ -19,7 +17,6 @@
         <select id="tipo" [(ngModel)]="nuevoProducto.tipo" name="tipo" class="form-control" required>
           <option value="ELABORADO_A_MANO">Elaborado a mano</option>
           <option value="ELABORADO_A_MANO_Y_MAQUINA">Elaborado a mano y máquina</option>
-          <!-- Agrega otras opciones según tu enum TipoProducto -->
         </select>
       </div>
       <div class="form-group">

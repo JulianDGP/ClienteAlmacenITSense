@@ -14,6 +14,11 @@ import { MarcarDefectuosoComponent } from './marcar-defectuoso/marcar-defectuoso
 import { RetirarComponent } from './retirar/retirar.component';
 import { VisualizarSalidaComponent } from './visualizar-salida/visualizar-salida.component';
 import { OrderByPipe } from './pipes/order-by.pipe';
+import { LoginComponent } from './auth/login/login.component';
+import { RegistroComponent } from './auth/registro/registro.component';
+import { IndexComponent } from './index/index/index.component';
+import { interceptorProvider } from './interceptors/producto-interceptors.service';
+
 
 @NgModule({
   declarations: [
@@ -24,7 +29,10 @@ import { OrderByPipe } from './pipes/order-by.pipe';
     MarcarDefectuosoComponent,
     RetirarComponent,
     VisualizarSalidaComponent,
-    OrderByPipe
+    OrderByPipe,
+    LoginComponent,
+    RegistroComponent,
+    IndexComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,7 +42,7 @@ import { OrderByPipe } from './pipes/order-by.pipe';
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [interceptorProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
